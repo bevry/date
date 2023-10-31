@@ -5,7 +5,7 @@
 export function getMonthsBetween(
 	suspectedEarlierDate: Date,
 	suspectedLaterDate: Date,
-	mode: 'relative' | 'absolute' | 'positive' = 'relative'
+	mode: 'relative' | 'absolute' | 'positive' = 'relative',
 ) {
 	const min = getEarlierDate(suspectedEarlierDate, suspectedLaterDate)
 	const max = getLaterDate(suspectedEarlierDate, suspectedLaterDate)
@@ -32,7 +32,7 @@ export function getMonthPrior(date: Date) {
 		date.getHours(),
 		date.getMinutes(),
 		date.getSeconds(),
-		date.getMilliseconds()
+		date.getMilliseconds(),
 	)
 }
 
@@ -74,12 +74,12 @@ export function sortDates(dates: Array<Date>) {
 export function getMonthsAfter(
 	startDate: Date,
 	endDate: Date,
-	filterDate?: Date
+	filterDate?: Date,
 ) {
 	const monthsActive = getMonthsBetween(
 		getLaterDate(startDate, filterDate),
 		getEarlierDate(endDate, new Date()),
-		'positive'
+		'positive',
 	)
 	return monthsActive
 }

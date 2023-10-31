@@ -7,86 +7,86 @@ kava.suite('@bevry/date', function (suite, test) {
 		equal(
 			getMonthsAfter(
 				new Date('2020-01-01T00:00:00Z'),
-				new Date('2020-03-01T00:00:00Z')
+				new Date('2020-03-01T00:00:00Z'),
 			),
 			2,
-			'2 months'
+			'2 months',
 		)
 		equal(
 			getMonthsAfter(
 				new Date('2020-01-01T00:00:00Z'),
 				new Date('2020-03-01T00:00:00Z'),
-				new Date('2020-02-01T00:00:00Z')
+				new Date('2020-02-01T00:00:00Z'),
 			),
 			1,
-			'1 months'
+			'1 months',
 		)
 		equal(
 			getMonthsAfter(
 				new Date('2020-01-10T00:00:00Z'),
-				new Date('2020-02-01T00:00:00Z')
+				new Date('2020-02-01T00:00:00Z'),
 			),
 			0,
-			'0 months'
+			'0 months',
 		)
 		equal(
 			getMonthsAfter(
 				new Date('2020-01-30T00:00:00Z'),
-				new Date('2020-02-10T00:00:00Z')
+				new Date('2020-02-10T00:00:00Z'),
 			),
 			0,
-			'0 months'
+			'0 months',
 		)
 		equal(
 			getMonthsAfter(
 				new Date('2020-01-30T00:00:00Z'),
-				new Date('2020-03-01T00:00:00Z')
+				new Date('2020-03-01T00:00:00Z'),
 			),
 			1,
-			'1 months'
+			'1 months',
 		)
 		equal(
 			getMonthsAfter(
 				new Date('2020-03-02T00:00:00Z'),
-				new Date('2020-03-01T00:00:00Z')
+				new Date('2020-03-01T00:00:00Z'),
 			),
 			0,
-			'0 months'
+			'0 months',
 		)
 		equal(
 			getMonthsAfter(
 				new Date('2020-04-01T00:00:00Z'),
-				new Date('2020-03-01T00:00:00Z')
+				new Date('2020-03-01T00:00:00Z'),
 			),
 			0,
-			'0 months'
+			'0 months',
 		)
 		equal(
 			getMonthsAfter(
 				new Date('2020-01-01T00:00:00Z'),
 				new Date('2020-03-01T00:00:00Z'),
-				new Date('2020-03-02T00:00:00Z')
+				new Date('2020-03-02T00:00:00Z'),
 			),
 			0,
-			'0 months'
+			'0 months',
 		)
 		equal(
 			getMonthsAfter(
 				new Date('2020-01-01T00:00:00Z'),
 				new Date('2020-03-02T00:00:00Z'),
-				new Date('2020-03-01T00:00:00Z')
+				new Date('2020-03-01T00:00:00Z'),
 			),
 			0,
-			'0 months'
+			'0 months',
 		)
 		equal(
 			getMonthsAfter(
 				new Date('2020-01-01T00:00:00Z'),
 				new Date('2020-03-01T00:00:00Z'),
-				new Date('2020-04-01T00:00:00Z')
+				new Date('2020-04-01T00:00:00Z'),
 			),
 			0,
-			'0 months'
+			'0 months',
 		)
 	})
 	test('sort', function () {
